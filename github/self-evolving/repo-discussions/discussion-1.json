@@ -1,0 +1,51 @@
+{
+  "number": 1,
+  "title": "docs/overview/what-is-self-evolving-repo",
+  "url": "https://github.com/self-evolving/repo-discussions/discussions/1",
+  "body": "# docs/overview/what-is-self-evolving-repo\n\nBesides the code itself, a self-evolving repository also contains two things: a schema for organizing development context, and an operational layer that can act on that context.\n\nhttps://www.self-evolving.app/docs/overview/what-is-self-evolving-repo\n\n<!-- sha1: 688feaad6a8c7f62a68a3bb3db069b088cc28ae6 -->",
+  "createdAt": "2026-05-21T03:21:03Z",
+  "updatedAt": "2026-05-21T03:22:33Z",
+  "author": {
+    "login": "giscus"
+  },
+  "category": {
+    "name": "General"
+  },
+  "comments": {
+    "nodes": [
+      {
+        "id": "DC_kwDOSjgnjc4BA2Fh",
+        "body": "@sepo-agent /answer what’s up ",
+        "createdAt": "2026-05-21T03:21:04Z",
+        "url": "https://github.com/self-evolving/repo-discussions/discussions/1#discussioncomment-16998753",
+        "author": {
+          "login": "lolipopshock"
+        },
+        "replies": {
+          "nodes": [
+            {
+              "id": "DC_kwDOSjgnjc4BA2Fp",
+              "body": "Hey @lolipopshock! Not much — just here and ready to help. 👋\n\nI'm **Sepo**, an AI agent running on this repository. You can mention me with commands like `/answer` to ask questions, get explanations, or request help with code and planning tasks.\n\nWhat can I do for you?",
+              "createdAt": "2026-05-21T03:22:32Z",
+              "url": "https://github.com/self-evolving/repo-discussions/discussions/1#discussioncomment-16998761",
+              "author": {
+                "login": "sepo-agent-app"
+              },
+              "replyTo": {
+                "id": "DC_kwDOSjgnjc4BA2Fh"
+              }
+            }
+          ],
+          "pageInfo": {
+            "hasNextPage": false,
+            "endCursor": null
+          }
+        }
+      }
+    ],
+    "pageInfo": {
+      "hasNextPage": false,
+      "endCursor": null
+    }
+  }
+}
