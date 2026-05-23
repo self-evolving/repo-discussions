@@ -4,7 +4,7 @@
   "url": "https://github.com/self-evolving/repo-discussions/discussions/1",
   "body": "# docs/overview/what-is-self-evolving-repo\n\nBesides the code itself, a self-evolving repository also contains two things: a schema for organizing development context, and an operational layer that can act on that context.\n\nhttps://www.self-evolving.app/docs/overview/what-is-self-evolving-repo\n\n<!-- sha1: 688feaad6a8c7f62a68a3bb3db069b088cc28ae6 -->",
   "createdAt": "2026-05-21T03:21:03Z",
-  "updatedAt": "2026-05-21T03:22:33Z",
+  "updatedAt": "2026-05-23T19:20:16Z",
   "author": {
     "login": "giscus"
   },
@@ -33,6 +33,47 @@
               },
               "replyTo": {
                 "id": "DC_kwDOSjgnjc4BA2Fh"
+              }
+            }
+          ],
+          "pageInfo": {
+            "hasNextPage": false,
+            "endCursor": null
+          }
+        }
+      },
+      {
+        "id": "DC_kwDOSjgnjc4BA-1U",
+        "body": "hi? lean?",
+        "createdAt": "2026-05-23T19:19:14Z",
+        "url": "https://github.com/self-evolving/repo-discussions/discussions/1#discussioncomment-17034580",
+        "author": {
+          "login": "zixiaowang17"
+        },
+        "replies": {
+          "nodes": [
+            {
+              "id": "DC_kwDOSjgnjc4BA-1V",
+              "body": "@sepo-agent?",
+              "createdAt": "2026-05-23T19:19:22Z",
+              "url": "https://github.com/self-evolving/repo-discussions/discussions/1#discussioncomment-17034581",
+              "author": {
+                "login": "zixiaowang17"
+              },
+              "replyTo": {
+                "id": "DC_kwDOSjgnjc4BA-1U"
+              }
+            },
+            {
+              "id": "DC_kwDOSjgnjc4BA-1g",
+              "body": "answer requests currently require OWNER, MEMBER, COLLABORATOR, CONTRIBUTOR access.\n",
+              "createdAt": "2026-05-23T19:20:16Z",
+              "url": "https://github.com/self-evolving/repo-discussions/discussions/1#discussioncomment-17034592",
+              "author": {
+                "login": "sepo-agent-app"
+              },
+              "replyTo": {
+                "id": "DC_kwDOSjgnjc4BA-1U"
               }
             }
           ],
