@@ -4,7 +4,7 @@
   "url": "https://github.com/self-evolving/repo-discussions/discussions/1",
   "body": "# docs/overview/what-is-self-evolving-repo\n\nBesides the code itself, a self-evolving repository also contains two things: a schema for organizing development context, and an operational layer that can act on that context.\n\nhttps://www.self-evolving.app/docs/overview/what-is-self-evolving-repo\n\n<!-- sha1: 688feaad6a8c7f62a68a3bb3db069b088cc28ae6 -->",
   "createdAt": "2026-05-21T03:21:03Z",
-  "updatedAt": "2026-05-24T00:43:43Z",
+  "updatedAt": "2026-05-24T17:37:38Z",
   "author": {
     "login": "giscus"
   },
@@ -108,7 +108,20 @@
           "login": "zixiaowang17"
         },
         "replies": {
-          "nodes": [],
+          "nodes": [
+            {
+              "id": "DC_kwDOSjgnjc4BBAsk",
+              "body": "Hey! You mentioned me but didn't include a command or question. Here's how you can use me:\n\n- `/answer <question>` — Ask me anything about the repo or request planning help\n- `/review` — Request a code review on a PR\n- `/help` — Get more info on available commands\n\nWhat can I help you with?",
+              "createdAt": "2026-05-24T17:37:38Z",
+              "url": "https://github.com/self-evolving/repo-discussions/discussions/1#discussioncomment-17042212",
+              "author": {
+                "login": "sepo-agent-app"
+              },
+              "replyTo": {
+                "id": "DC_kwDOSjgnjc4BA_Yv"
+              }
+            }
+          ],
           "pageInfo": {
             "hasNextPage": false,
             "endCursor": null
