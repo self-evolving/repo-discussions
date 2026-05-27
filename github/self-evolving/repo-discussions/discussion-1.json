@@ -4,7 +4,7 @@
   "url": "https://github.com/self-evolving/repo-discussions/discussions/1",
   "body": "# docs/overview/what-is-self-evolving-repo\n\nBesides the code itself, a self-evolving repository also contains two things: a schema for organizing development context, and an operational layer that can act on that context.\n\nhttps://www.self-evolving.app/docs/overview/what-is-self-evolving-repo\n\n<!-- sha1: 688feaad6a8c7f62a68a3bb3db069b088cc28ae6 -->",
   "createdAt": "2026-05-21T03:21:03Z",
-  "updatedAt": "2026-05-24T17:37:38Z",
+  "updatedAt": "2026-05-27T03:30:33Z",
   "author": {
     "login": "giscus"
   },
@@ -119,6 +119,35 @@
               },
               "replyTo": {
                 "id": "DC_kwDOSjgnjc4BA_Yv"
+              }
+            }
+          ],
+          "pageInfo": {
+            "hasNextPage": false,
+            "endCursor": null
+          }
+        }
+      },
+      {
+        "id": "DC_kwDOSjgnjc4BBHjB",
+        "body": "Hi @sepo-agent /answer how do you organize your memory such that you could remember important ideas when the repo grows bigger and bigger?",
+        "createdAt": "2026-05-27T03:29:03Z",
+        "url": "https://github.com/self-evolving/repo-discussions/discussions/1#discussioncomment-17070273",
+        "author": {
+          "login": "qianyu-zhu"
+        },
+        "replies": {
+          "nodes": [
+            {
+              "id": "DC_kwDOSjgnjc4BBHjN",
+              "body": "My memory directory exists but is currently empty — so this is a fresh start. Here's how I organize memory as a repo grows:\n\n---\n\n## How I Structure Memory\n\nI use a **file-based memory system** with an index file (`MEMORY.md`) and typed memory files. Each memory file has a frontmatter header (`name`, `description`, `type`) and structured body.\n\n### Memory Types\n\n| Type | Purpose |\n|------|---------|\n| `project` | Ongoing work, goals, decisions, deadlines |\n| `user` | Who the contributors are, their roles and preferences |\n| `feedback` | How I should (or shouldn't) behave — corrections and confirmations |\n| `reference` | Where things live: Linear projects, Grafana boards, Slack channels |\n\n### Key Principles\n\n1. **Index stays lean** — `MEMORY.md` is a one-liner-per-entry pointer file. It's always loaded, so keeping it under ~200 lines is critical.\n2. **Files go deep** — the actual content with context (`**Why:**`, `**How to apply:**`) lives in individual `.md` files.\n3. **No code patterns** — architecture, file paths, and conventions are derived from the live codebase, not stored in memory (they'd go stale).\n4. **Decay awareness** — project memories include absolute dates and motivation so I can tell when they're no longer load-bearing.\n5. **Verify before citing** — if a memory names a file or function, I grep/read it first before recommending it, since it may have been renamed or deleted.\n\n### As the Repo Grows\n\n- I group memories **semantically** (by topic), not chronologically\n- I **update or remove** stale entries rather than accumulating duplicates\n- For large repos, the `reference` type becomes especially valuable — pointing to external systems (issue trackers, dashboards) rather than duplicating their content locally\n\n---\n\nRight now my memory is blank for this repo — if there are important architectural decisions, team conventions, or ongoing initiatives you'd like me to retain, just say **\"remember that...\"** and I'll save them for future conversations.",
+              "createdAt": "2026-05-27T03:30:33Z",
+              "url": "https://github.com/self-evolving/repo-discussions/discussions/1#discussioncomment-17070285",
+              "author": {
+                "login": "sepo-agent-app"
+              },
+              "replyTo": {
+                "id": "DC_kwDOSjgnjc4BBHjB"
               }
             }
           ],
