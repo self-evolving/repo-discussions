@@ -14,7 +14,7 @@ const DEFAULT_BOT_EMAIL = "279869237+sepo-agent@users.noreply.github.com";
 const MAX_BUFFER = 10 * 1024 * 1024;
 const PREPARE_STATE_VERSION = 1;
 const SEPO_APP_INSTALL_URL = "https://github.com/apps/sepo-agent-app/installations/select_target";
-const SEPO_SETUP_GUIDE_URL = "https://github.com/self-evolving/repo/blob/main/.agent/docs/deployment/setup-guide.md";
+const SEPO_SETUP_GUIDE_URL = "https://github.com/self-evolving/repo/blob/main/.agent/docs/setup/setup-guide.md";
 const REQUIRED_SETUP_HEADING = "## Required setup after merge";
 
 export type InstallForkPrAction = "prepare" | "publish";
@@ -204,7 +204,7 @@ function buildRequiredSetupSection(targetRepo: string): string {
     REQUIRED_SETUP_HEADING,
     "",
     `1. ${markdownLink("Install the Sepo GitHub App on the target repository", SEPO_APP_INSTALL_URL)}, or choose another supported auth path from the ${markdownLink("setup guide", SEPO_SETUP_GUIDE_URL)}.`,
-    `2. Add \`OPENAI_API_KEY\` and/or \`CLAUDE_CODE_OAUTH_TOKEN\` in ${markdownLink("Actions secrets", secretsUrl)}.`,
+    `2. Add \`OPENAI_API_KEY\`, \`CLAUDE_CODE_OAUTH_TOKEN\`, and/or \`ANTHROPIC_API_KEY\` in ${markdownLink("Actions secrets", secretsUrl)}.`,
     `3. Run ${markdownLink("Agent / Onboarding / Check Setup", onboardingUrl)}.`,
     `4. Review the ${markdownLink("Sepo setup check issue", setupIssueUrl)} and complete remaining setup.`,
     `5. If needed, run ${markdownLink("Agent / Memory / Initialization", memoryUrl)} to create \`agent/memory\`.`,
