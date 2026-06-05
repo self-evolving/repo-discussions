@@ -5,7 +5,7 @@
   },
   "baseRefName": "main",
   "body": "## Summary\n\nUpdate Sepo agent infrastructure from **v0.2.0** to **v0.3.0** (`bec597687fdb1a1786e7127ee6ddd5ec088f36af`).\n\n- Source: `self-evolving/repo@v0.3.0`\n- Target branch: `main`\n- Update branch: `agent/update-agent-infra-20260601`\n\n## Key changes in v0.3.0\n\n- **Model policy / configurable model routing**: All key workflows and actions now support `AGENT_MODEL_POLICY` (via `vars.AGENT_MODEL_POLICY`), `anthropic_api_key`, `model`, and `reasoning_effort` inputs/outputs, enabling per-route model selection\n- **AGENT_ENABLED guard**: Added `vars.AGENT_ENABLED != 'false'` job-level pause guard to all `agent-*.yml` workflows, entrypoint, router, and orchestrator — set `AGENT_ENABLED=false` to pause all Sepo workflows\n- **resolve-agent-provider: shell → Node.js**: Migrated `resolve-provider.sh` to `resolve-provider.js` for richer provider resolution logic (validates model policy, handles `OPENAI_API_KEY`, `CLAUDE_CODE_OAUTH_TOKEN`, `ANTHROPIC_API_KEY`, and per-route overrides)\n- **run-agent-task action**: New `model`, `display_model`, `anthropic_api_key` inputs + `model`, `model_display` outputs for model-aware task runs\n- **New docs**: `.agent/docs/setup/` and `.agent/docs/usage/` sections added with setup guides, supported-workflows reference, and agent-actions documentation\n- **Docs reorganized**: Deployment docs moved under `setup/`, architecture docs updated\n\n## Audit summary\n\n| Path | Action |\n|---|---|\n| `.agent/` (src, docs, package.json, package-lock.json) | Updated from v0.2.0 → v0.3.0 |\n| `.github/workflows/agent-*.yml` (all 24) | Updated — all gain `AGENT_ENABLED` guard and model-policy plumbing |\n| `.github/actions/resolve-agent-provider/` | Updated: `action.yml` updated, `resolve-provider.js` added, `resolve-provider.sh` removed |\n| `.github/actions/run-agent-task/action.yml` | Updated: new model/display_model inputs and outputs |\n| `.github/prompts/agent-install.md` | Updated |\n| `.github/ISSUE_TEMPLATE/` | No change (identical) |\n| `.github/workflows/test-scripts.yml` | No change (identical) |\n| `AGENT.md` | Skipped (not agent-owned per run config) |\n| `.skills/` | Skipped (not requested) |\n| `README.md` | Skipped (target root README — not updated per skill constraints) |\n| `agent/memory` branch | Exists — not modified |\n| `agent/rubrics` branch | Not present |\n\n## Customizations preserved\n\n- All target-only `.github` files preserved\n- `.gitignore` already contains `.agent/dist/` and `.agent/node_modules/` entries — no change needed\n- `test-scripts.yml` is identical between source and target — unchanged\n\n## Validation\n\n- `npm --prefix .agent ci` — passed\n- `npm --prefix .agent run build` — passed (tsc, no errors)\n- `npm --prefix .agent test` — 685/686 tests pass\n  - **1 expected failure**: `packaged Sepo workflows have a global AGENT_ENABLED job guard` — this new v0.3.0 test also checks that `README.md` (repo root) contains `AGENT_ENABLED=false` documentation. The target README.md is the v0.2.0 template copy and does not yet include the `AGENT_ENABLED=false` line. The README was not updated per skill constraints (target root `README.md` requires explicit approval). To fix: update line 71 of `README.md` to add `, or set \\`AGENT_ENABLED=false\\` to pause all Sepo agent workflows` after the `AGENT_AUTO_UPDATE=false` mention.\n- YAML parsing: all `.github/workflows/*.yml` parsed successfully via build/test\n\n## Memory / Rubrics branch status\n\n- `agent/memory`: **exists** (`2f85f74`) — no action needed\n- `agent/rubrics`: **not present** — no action needed unless rubrics are desired\n\n## Post-merge notes\n\nAfter merging:\n1. Verify `OPENAI_API_KEY` and/or `CLAUDE_CODE_OAUTH_TOKEN` secrets are still set (unchanged requirement)\n2. New optional variable: set `AGENT_MODEL_POLICY` (repository variable) to configure model routing — see `.agent/docs/customization/configuration-list.md`\n3. New optional variable: set `AGENT_ENABLED=false` (repository variable) to pause all Sepo workflows\n4. Run `Agent / Onboarding / Check Setup` to confirm the updated setup is healthy\n5. Optionally fix the `README.md` `AGENT_ENABLED` mention (see validation note above)",
-  "closedAt": null,
+  "closedAt": "2026-06-05T05:18:55Z",
   "comments": [],
   "createdAt": "2026-06-01T15:39:17Z",
   "files": [
@@ -414,12 +414,12 @@
   ],
   "headRefName": "agent/update-agent-infra-20260601",
   "labels": [],
-  "mergedAt": null,
+  "mergedAt": "2026-06-05T05:18:55Z",
   "number": 2,
   "reviewDecision": "",
   "reviews": [],
-  "state": "OPEN",
+  "state": "MERGED",
   "title": "Update Sepo from v0.2.0 to v0.3.0/bec597687fdb1a1786e7127ee6ddd5ec088f36af",
-  "updatedAt": "2026-06-01T15:39:17Z",
+  "updatedAt": "2026-06-05T05:19:06Z",
   "url": "https://github.com/self-evolving/repo-discussions/pull/2"
 }
